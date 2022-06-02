@@ -1,0 +1,50 @@
+
+@mixin smallsize($fw){
+    font-weight: $fw;
+    font-size: 14px;
+    line-height: 17px;
+  }
+  @mixin normalsize{
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+  }
+  @mixin largsize($LH){
+    font-weight: 400;
+    font-size: 26px;
+    line-height: $LH;
+  }
+  @mixin xlarge {
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 70px;
+  }
+  @mixin xxlarge{
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 105px;
+  }
+  @mixin sitebtn ($bg){
+    background: $bg;
+    height: 42px;
+    width: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include smallsize(700);
+    text-align: center;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: $white-color;
+    text-decoration: none;
+    transition: all 0.4s ease-in-out;
+  }
+  @mixin SlickArrow($rotate){
+      content: '';
+      border: solid $black-color;
+      border-width: 0 3px 3px 0;
+      display: inline-block;
+      padding: 14px;
+      transform: rotate($rotate);
+      -webkit-transform: rotate($rotate);
+  }
